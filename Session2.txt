@@ -1,0 +1,335 @@
+Information Security 
+--------------------
+
+Information security (sometimes referred to as InfoSec) covers the tools and 
+processes that organizations use to protect information. 
+
+This includes policy settings that prevent unauthorized people from accessing 
+business or personal information. 
+
+InfoSec is a growing and evolving field that covers a wide range of fields, 
+from network and infrastructure security to testing and auditing.
+
+
+The basic tenets of information security are confidentiality, integrity and 
+availability. 
+
+Every element of the information security program must be designed to implement 
+one or more of these principles. Together they are called the CIA Triad.
+
+
+Confidentiality
+
+Confidentiality measures are designed to prevent unauthorized disclosure of 
+information. The purpose of the confidentiality principle is to keep personal 
+information private and to ensure that it is visible and accessible only to 
+those individuals who own it or need it to perform their organizational functions.
+
+
+Integrity
+
+Consistency includes protection against unauthorized changes 
+(additions, deletions, alterations, etc.) to data. 
+
+The principle of integrity ensures that data is accurate and reliable and is 
+not modified incorrectly, whether accidentally or maliciously.
+
+
+Availability
+
+Availability is the protection of a system’s ability to make software systems and 
+data fully available when a user needs it (or at a specified time). 
+
+The purpose of availability is to make the technology infrastructure, the 
+applications and the data available when they are needed for an organizational 
+process or for an organization’s customers.
+
+Authentication and Authorization
+---------------------------------
+
+Authentication and authorization are two vital information security processes that 
+administrators use to protect systems and information. 
+
+Authentication verifies the identity of a user or service, and 
+
+authorization determines their access rights. 
+
+Although the two terms sound alike, they play separate but equally essential roles 
+in securing applications and data.
+
+
+API Security
+------------
+
+
+API security is the protection of the integrity of APIs—both the ones you own and 
+the ones you use.
+
+
+Why is API security important?
+------------------------------
+Businesses use APIs to connect services and to transfer data. Broken, exposed, or 
+hacked APIs are behind major data breaches. They expose sensitive medical, 
+financial, and personal data for public consumption. 
+
+That said, not all data is the same nor should be protected in the same way. 
+
+How you approach API security will depend on what kind of data is being transferred.
+
+
+Although there are several methods of API authentication, here are some of the most popular:
+
+    HTTP Basic Authentication
+    API Key Authentication
+    OAuth Authentication
+
+
+HTTP Basic Authentication
+--------------------------
+HTTP Basic Authentication is the simplest form of identification. 
+This technique combines username and password to form a single value and passes 
+it through a special HTTP header known as authorization where they are encoded 
+with Base64. 
+
+Therefore, when a client makes a request, the server checks the Authorization 
+header and compares it to the credentials (username and password) it has stored. 
+
+If they match, the server fulfills the client request, and if not, a special 
+status code is sent back to inform clients that authentication has failed and 
+their request denied.
+
+
+
+API Key Authentication
+-----------------------
+API Key authentication is a technique that was invented to overcome the weaknesses 
+of shared credentials which was a big problem in HTTP Basic authentication. 
+
+The API key is usually a long series of numbers and letters that you either 
+include in the request header or request URL. 
+
+When the client authenticates the API key, the server stamps their identity and 
+allows them to access data.
+
+Although this scheme is highly reliable, there some few tips that can make the 
+API more secure:
+
+    1. Make sure that you use HTTPS at all times.
+    2. Keep it simple
+    3. Avoid exposing information on URLs
+    4. Use password hash
+    5. Install some parameter validation
+
+
+OAuth Authentication
+--------------------
+Technically, Oauth is a technique that does both authentication and authorization. 
+It is a form of API authentication that gives applications with the ability to 
+communicate with API server to provide access. When a user logs into the system, 
+it requests authentication in the form of a token. 
+
+The client is required to forward the request to an authentication server, which 
+either allows or rejects this it. 
+
+
+Demo Program to access the url's
+
+
+Understanding potential threats for APIs
+----------------------------------------
+API security risks are a common problem in today’s cyber world. 
+
+here is a list of the top 10 API security risks.
+
+1. Bad Coding
+
+2. Inadequate Validation
+
+3. Hesitating over utilization
+In big companies, sometimes management can neglect to track APIs and their utilization numbers. From this point, you can incur many charges and leave yourself open to security risks due to exposed APIs.
+
+
+4. Accountability
+
+Accountability is a tricky question. 
+
+Who really is accountable for API security risks? 
+
+The answer begins with the developer. It’s the developer’s job to create a solid API. 
+Yet, accountability also falls on the shoulders of the person utilizing the API. 
+People who use APIs can add additional API security measures by being mindful via 
+extra layers of protection.
+
+
+5. Risks of XML
+
+Note that the XML format is intertwined with the SOAP protocol. 
+This format has several areas of security risks where hackers can focus on. 
+It’s important to keep on top of this format to avoid a security breach.
+
+6. API incompetence
+
+Repetitive and redundant API usage can drag on if it’s not tracked. 
+When this happens, a huge expense can incur. 
+API monitoring must be in place for usage, so having a strong API governance in 
+place is very helpful.
+
+
+7. Lack of security—a terrible idea
+
+Without security measures in place such as a Transport Layer Security (TLS), 
+you are leaving yourself vulnerable to hackers. Having encryption processes in 
+place is key to protecting your APIs.
+
+8. Terms to pay attention
+
+Always pay attention to the Terms of Service. If you don’t read up, you will not 
+be fully informed about what your API is supplying 
+
+9. Going overboard with control
+
+As soon as API calls come in, your API is exposed. It’s always prudent to set 
+limits on API password configurations, connections, as well as making 
+re-authentication mandatory for overuse. 
+
+It may seem to be going overboard on control, but it is better to err on the side 
+of caution.
+
+
+10. Unsatisfactory security
+
+Endpoints can remain vulnerable–and any competent hacker will have a field day 
+if security measures are not in place. 
+
+Developers need to have the best API format to protect the security of their API.
+
+Encryption and Hashing
+-----------------------
+
+Encryption and hashing are the two terms used widely in cryptography. 
+
+what is the difference between encryption and hashing?
+
+Encryption
+----------
+Encryption is the process of converting a normal readable message known as 
+plaintext into a garbage message or not readable message known as Ciphertext. 
+
+The ciphertext obtained from the encryption can easily be transformed into 
+plaintext using the encryption key. 
+
+Some of the examples of encryption algorithms are RSA, AES, and Blowfish.
+
+Hashing
+-------
+Hashing is the process of converting the information into a key using a hash 
+function. 
+
+The original information cannot be retrieved from the hash key by any means. 
+Generally, the hash keys are stored in the database and they are compared to 
+check whether the original information matches or not. 
+
+They are generally used to store the passwords for login. 
+Some of the examples of a hashing algorithm are MD5, SHA256.
+
+
+Encryption and Decryption APIs
+------------------------------
+
+The Encryption and Decryption APIs allow you to store information or to communicate
+with other parties while preventing uninvolved parties from understanding the 
+stored information or understanding the communication. 
+
+Encryption transforms understandable text (cleartext) into an unintelligible piece 
+of data (ciphertext). 
+
+Decrypting restores the cleartext from the ciphertext. Both processes involve a 
+mathematical formula (algorithm) and secret data (key).
+
+
+The Encryption and Decryption APIs include:
+
+1. Decrypt Data (QC3DECDT, Qc3DecryptData) restores encrypted data to a 
+	clear (intelligible) form.
+    
+2. Decrypt With MAC (QC3DECWM, Qc3DecryptWithMAC) decrypts and verifies data that 
+	was encrypted and authenticated with the Encrypt With 
+	MAC (OPM, QC3ENCWM; ILE, Qc3EncryptWithMAC) API.
+    
+3. Encrypt Data (QC3ENCDT, Qc3EncryptData) protects data privacy by scrambling 
+	clear data into an unintelligible form.
+    
+4. Encrypt With MAC (QC3ENCWM, Qc3EncryptWithMAC) both authenticates and encrypts 
+	data in a single operation.
+    
+5. Translate Data (QC3TRNDT, Qc3TranslateData) translates data from encryption 
+	under one key to encryption under another key.
+
+Input Parameter Validation
+---------------------------
+
+Input Parameter Validation in Sterling Field Sales ensures that the malicious 
+scripts do not reach the business layer as the validation layer validates the 
+data and sends it for further processing only on successful validation.
+
+The main purpose of this activity is not to validate the individual input fields 
+in the UI, but to safe guard the application as a whole from external attacks 
+like the XSS.
+
+
+Asymmetric Encryption vs Symmetric Encryption
+---------------------------------------------
+
+Symmetric encryption encrypts and decrypts the information using a single password.
+In this encryption technique, the message is encrypted with a key, and the same key
+is used for decrypting the message. 
+
+It is the simplest and commonly known encryption technique. 
+It makes it easy to use but less secure.
+
+Asymmetric encryption uses two keys for encryption and decryption. 
+
+It is based on the technique of public and private keys. 
+
+A public key, which is interchanged between more than one user. 
+Data is decrypted by a private key, which is not exchanged. 
+It is slower but more secure. 
+
+The public key used in this encryption technique is available to everyone, 
+but the private key used in it is not disclosed.
+
+
+API Management principles
+-------------------------
+
+API management is the practice an organization implements to manage the APIs 
+they expose. 
+
+This is done either internally or externally to ensure that their APIs are 
+consumable, secure, and available to consumers in conditions agreed upon in the 
+APIs terms of use. 
+
+Essential features API management should provide (rather than what specific 
+solutions do) include the following:
+
+1. API Catalog
+
+2. API Client Registry
+
+3. API Gateway
+
+4. Developer Portal
+
+
+API Gateway and Developer Portal - Refer the stored bookmarks
+
+Java Swagger Program to demo
+
+
+
+
+
+
+
+
+

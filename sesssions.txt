@@ -1,0 +1,387 @@
+Microservices
+--------------
+
+Microservices are an architectural and organizational approach to software development where 
+software is composed of small independent services that communicate over well-defined APIs. 
+
+These services are owned by small, self-contained teams
+
+
+Microservices architectures make applications easier to scale and faster to develop, 
+enabling innovation and accelerating time-to-market for new features
+
+
+Monolithic Vs MicroServices Architecture
+----------------------------------------
+With monolithic architectures, all processes are tightly coupled and run as a single service. 
+This means that if one process of the application experiences a spike in demand, 
+the entire architecture must be scaled. 
+
+Adding or improving a monolithic application’s features becomes more complex as the code base 
+grows. This complexity limits experimentation and makes it difficult to implement new ideas. 
+
+
+With a microservices architecture, an application is built as independent components that run 
+each application process as a service. 
+
+These services communicate via a well-defined interface using lightweight APIs. 
+Services are built for business capabilities and each service performs a single function. 
+Because they are independently run, each service can be updated, deployed, and scaled to meet 
+demand for specific functions of an application.
+
+
+
+Difference between Microservices based architecture and Service-Oriented Architecture (SOA)
+-------------------------------------------------------------------------------------------
+
+Service-oriented architecture (SOA) is an enterprise-wide approach to software development of 
+application components that takes advantage of reusable software components, or services.
+
+
+In SOA software architecture, each service is comprised of the code and data integrations 
+required to execute a specific business function 
+
+— for example, checking a customer’s credit, signing into a website or processing a 
+mortgage application.
+
+
+The service interfaces provide loose coupling, which means that they can be called with little 
+or no knowledge of how the integration is implemented underneath. 
+
+Because of this loose coupling and the way the services are published, development teams can 
+save time by reusing components in other applications across the enterprise. 
+
+This is both a benefit and a risk. As a result of the shared access to the enterprise service 
+bus (ESB), if issues arise, it can also affect the other connected services. 
+
+SOA provides four different service types:
+
+    
+	 1. Functional services (i.e., business services), which are critical for business 
+		applications.
+	 
+	 2. Enterprise services, which serve     to implement functionality.
+    
+	 3. Application services, which are used to develop and deploy apps.
+    
+	 4. Infrastructure services, which are instrumental for backend processes like security 
+		 and authentication.
+
+Each service consists of three components:
+
+	1. The interface, which defines how a service provider will execute requests from a service 
+		consumer.
+    
+	2. The contract, which defines how the service provider and service consumer should 
+	   interact.
+    
+	3. The implementation, which is the service code.
+
+
+Scaling of Microservices
+------------------------
+Dynamic Scaling - Horizontal and vertical
+Only those service has high demand can be scaled.
+Kubernetes can be best tool
+AWS Kubernetes can be used.
+
+
+Different Interaction Patterns in Microservices
+------------------------------------------------
+1.Aggregator
+2. API Gateway
+3. Chained or Chain of Responsibilities
+4. Asychronous Messaging
+
+
+
+
+Trade-offs between REST and RPC, why to consider REST as a good starting point for 
+request/response integration
+----------------------------------------------------------------------------------
+
+REST and RPC are design architectures widely used in web development to build APIs 
+(Application Programming Interface). 
+
+It is a set of instructions that permits two systems to share resources and services. 
+
+The client creates a request to the server that responds to it with data in JSON or XML format.
+
+
+Advantages of REST APIs
+
+   -> They are very scalable as the client and server are decoupled easing to scale in the future.
+    
+	-> Simple, standardized, and easy to use.
+    
+	-> Uses already existing HTTP features.
+    
+	-> They have high performance because of their cache capabilities.
+    
+	-> Allows Standard-based protection with the use of OAuth protocols to verify REST requests.
+    
+	-> Brings flexibility by serializing data in XML or JSON format.
+
+Disadvantages of REST APIs
+
+    -> REST API’s payload is quite big hence the entire files get back while you needed one field.
+    
+	-> It loses the ability to maintain state in REST.
+
+
+Advantages of RPC APIs
+
+    -> They provide usage op applications in both local and distributed environments.
+    
+	-> It provides ABSTRACTION.
+    
+	-> They have lightweight payloads, therefore, provides high performance.
+    
+	-> They are easy to understand and work as the action is part of the URL.
+
+Disadvantages of RPC APIs
+
+    -> It can be implemented in many ways as it is not well standardized.
+    
+	-> It has no flexibility for hardware architecture.
+
+Future of Microservices
+-----------------------
+Microservices are the next generation architecture due to following reasons:
+
+1. Flexibility
+
+2. Reusability
+
+3. Reduces Risk
+
+4. Scalability
+
+5. Reduces Cost
+
+6. Continious Delivery
+
+7. Various Data Storage
+
+8. Easy team collaboration
+
+9. Adaptability
+
+With microservice architecture, organizations can use various programming languages or different technologies for building a 
+new feature for their business. That means the developers can implement fast and controlled upgrades without disruption.
+
+10. Agility
+
+Each service in a microservice architecture performs only one functionality. Accordingly, it is easier to release, scale and test 
+each service independently as it comprises a lightweight codebase. 
+
+Because of this advantage, Amazon migrated its monolithic architecture to microservices. 
+
+Their complex team structure was replaced by smaller, more efficient and cross-functional teams.
+
+
+
+
+Role of API's
+-------------
+
+
+Introduction to Mesh Services
+------------------------------
+Microservices architecture can decrease the complexity of an organization’s software development 
+efforts by breaking software into smaller, more manageable units. 
+
+However, this decreased intra-service complexity comes at the cost of the increased complexity of 
+inter-service communication.
+
+
+Consider some of the problems that come with managing a larger number of microservices:
+
+    Low visibility into service health.
+    High inter-service latency.
+    Difficulty understanding dependencies between microservices.
+    Brittle, ad-hoc authentication mechanisms.
+
+
+
+Service mesh products generally share some core architectural features that allow them to accomplish 
+their goal of improving resiliency, observability, and discoverability across an organization’s 
+microservices.
+
+A service mesh is divided into two logical planes; the Control Plane and the Data Plane.
+
+
+
+
+What is a service mesh?
+-----------------------
+A service mesh is a dedicated infrastructure layer that controls service-to-service communication 
+over a network.
+
+
+This method enables separate parts of an application to communicate with each other. 
+
+
+Service meshes appear commonly in concert with cloud-based applications, containers and microservices.
+
+
+A service mesh controls the delivery of service requests in an application. 
+
+Common features provided by a service mesh include service discovery, load balancing, encryption and 
+failure recovery. 
+
+High availability is also common through the use of software controlled by APIs rather than through 
+hardware. Service meshes can make service-to-service communication fast, reliable and secure.
+
+
+How a service mesh works
+------------------------
+A service mesh architecture uses a proxy instance called a sidecar in whichever development paradigm 
+is in use, typically containers and/or microservices. In a microservice application, a sidecar 
+attaches to each service. 
+
+In a container, the sidecar attaches to each application container, VM or container 
+orchestration unit, such as a Kubernetes pod.
+
+
+
+Why adopt a service mesh?
+-------------------------
+An application structured in a microservices architecture might comprise dozens or hundreds of 
+services, all with their own instances that operate in a live environment. It's a big challenge 
+for developers to keep track of which components must interact, monitor their health and performance 
+and make changes to a service or component if something goes wrong.
+
+
+
+Key Features of Service Mesh
+----------------------------
+1. Realibility
+2. Observability
+3. Security
+
+Some advantages of a service mesh are as follows:
+
+    1. Simplifies communication between services in both microservices and containers.
+    
+	2. Easier to diagnose communication errors, because they would occur on their own infrastructure layer.
+    
+	3. Supports security features such as encryption, authentication and authorization.
+    
+	4. Allows for faster development, testing and deployment of an application.
+    
+	5. Sidecars placed next to a container cluster is effective in managing network services.
+	
+
+
+
+
+Disadvantages
+------------
+
+    Runtime instances increase through use of a service mesh.
+    Each service call must first run through the sidecar proxy, which adds a step.
+    Service meshes do not address integration with other services or systems, and routing type or
+	transformation mapping.
+    Network management complexity is abstracted and centralized, but not eliminated -- someone must 
+	integrate service mesh into workflows and manage its configuration.
+
+
+
+
+
+
+
+
+
+
+
+
+Two way SSL handshaking, Digital Signing of API Request (XML & JSON)
+--------------------------------------------------------------------
+
+SSL Handshake
+
+In Two-Way SSL authentication, the client and server need to authenticate 
+and validate each others identities. 
+
+The authentication message exchange between client and server is called an SSL handshake, 
+and it includes the following steps:
+
+    1. A client requests access to a protected resource.
+    
+	2. The server presents its certificate to the client.
+    
+	3. The client verifies the server's certificate.
+    
+	4. If successful, the client sends its certificate to the server.
+    
+	5. The server verifies the client’s credentials.
+    
+	6. If successful, the server grants access to the protected resource requested by the 
+		client.
+
+
+API Life Cycle
+--------------
+
+1. Design
+2. Implement
+3. Management
+
+
+
+Design
+------
+
+The first step in the API lifecycle is design — when the API is created. Designing an API starts 
+with an outside-in perspective, beginning with the “interface/contract” of the API. 
+
+
+Within this step, API developers perform these tasks:
+
+Design:   Identify process and business requirements, create logical data model, translate into 
+          logical service, API groupings
+
+Simulate: Model API resources, model API operations/methods, model request/response payload/codes
+
+Feedback: Mock up the API, publish interactive console, create notebook use cases, receive developer 
+          feedback
+
+Validate: Modify API design as appropriate based on developer feedback, continue to validate
+
+
+
+Implement
+--------
+
+API implementation is a critical piece of enabling a next-generation enterprise. 
+Enabling the connectivity of hundreds or thousands of APIs to a backend as well as to each other is 
+key. This must be done in a systematic manner (as opposed to point-to-point code).
+
+
+The two steps that go into the implementation stage are building and testing. 
+
+
+Management
+-----------
+
+It is critical to ensure your application building blocks are following best practices in security 
+and architectural governance by applying policies to them at runtime. 
+
+Monitoring all traffic via an API manager is equally critical because it just takes just one weak 
+link to bring the ship down.
+
+Within this lifecycle stage are the following steps:
+
+Secure
+Deploy
+Monitor
+Troubleshoot
+Manage
+
+
+Demo on creating a Microservice using REST API
+----------------------------------------------
+
+

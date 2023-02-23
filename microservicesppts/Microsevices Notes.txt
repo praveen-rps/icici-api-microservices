@@ -1,0 +1,55 @@
+Spring and MicroServices
+-------------------------
+
+Program: Program is a set of instructions which performs a specific tastk.
+Component: A reusable program is called a component.
+Service: A resuable component which is exposed over the network is called service.
+
+Micro Service
+
+Macro Service : When microservices are assembled together we will get
+macro service.
+
+Application Types:
+1. Monolithic --- Is written by maintaing JEE standards
+2. MicroService --- when we use Java EE we can achevie 40% reusability.
+Then shifted towards microservices.
+
+springboot is purely designed for microservices which supports 80% resuability.
+
+FAST API is another technology given by python can also be used to create MS
+HELIDON also used to create MS
+SpringBoot using Kotlin also used to create MS
+NodeJS and ExpessJS also uses to create MS
+NextJS also used to create MS
+also LoopBack.Js also used to create MS
+
+Top Most 4 MS frameworks are:
+1. Springboot with java
+2. Helidon
+3. FAST API
+4. NodeJS and ExpressJS
+
+
+12 factor application design in microservices
+ref: https://12factor.net/
+
+cloud native : Activity platform which provides an environment
+as like that of cloud.
+
+
+ref: https://github.com/vishymails
+
+
+MS are tightly coupled to with DevOps and 12 factors approach
+
+PODMan is substitute for Docker
+
+container is collection of components
+
+
+
+
+
+
+
