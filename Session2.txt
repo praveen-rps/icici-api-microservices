@@ -66,6 +66,11 @@ API security is the protection of the integrity of APIs—both the ones you own 
 the ones you use.
 
 
+
+eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcmF2ZWVuIiwiZXhwIjoxNjc3MTY1MjYxLCJpYXQiOjE2NzcxMjkyNjF9.nsBBvYm9NIK1qVl43ole4gyWyCck91LakeotLdTBTvM
+
+
+
 Why is API security important?
 ------------------------------
 Businesses use APIs to connect services and to transfer data. Broken, exposed, or 
@@ -81,7 +86,35 @@ Although there are several methods of API authentication, here are some of the m
 
     HTTP Basic Authentication
     API Key Authentication
+
+-------------------------------------------> Authenticate user
     OAuth Authentication
+-------------------------------------------> Authenticate an application
+
+
+
+api1--------------> deleting
+api2 -------------> balance
+api3 -----------------> general info
+
+
+Authenticate and authorize
+
+/testcustomer
+/testadmin
+/delete
+
+
+customer
+admin
+
+
+praveen ---- kumar ----> admin
+satish ---- 12345 -----> customer
+
+
+
+
 
 
 HTTP Basic Authentication
@@ -100,8 +133,8 @@ their request denied.
 
 
 
-API Key Authentication
------------------------
+API Key Authentication // Token Based authenication
+----------------------------------------------------
 API Key authentication is a technique that was invented to overcome the weaknesses 
 of shared credentials which was a big problem in HTTP Basic authentication. 
 
@@ -121,6 +154,10 @@ API more secure:
     5. Install some parameter validation
 
 
+Authorize
+
+
+
 OAuth Authentication
 --------------------
 Technically, Oauth is a technique that does both authentication and authorization. 
@@ -134,6 +171,15 @@ either allows or rejects this it.
 
 Demo Program to access the url's
 
+localhost:8080/delete
+
+
+Number of ways the data will be transmitted to server
+
+1. Path
+2. Request Body
+3. Request Parameters 
+
 
 Understanding potential threats for APIs
 ----------------------------------------
@@ -146,6 +192,7 @@ here is a list of the top 10 API security risks.
 2. Inadequate Validation
 
 3. Hesitating over utilization
+
 In big companies, sometimes management can neglect to track APIs and their utilization numbers. From this point, you can incur many charges and leave yourself open to security risks due to exposed APIs.
 
 
@@ -202,6 +249,11 @@ Endpoints can remain vulnerable–and any competent hacker will have a field day
 if security measures are not in place. 
 
 Developers need to have the best API format to protect the security of their API.
+
+
+
+
+
 
 Encryption and Hashing
 -----------------------
@@ -324,6 +376,159 @@ solutions do) include the following:
 API Gateway and Developer Portal - Refer the stored bookmarks
 
 Java Swagger Program to demo
+
+	
+
+
+Java ---- unit testing -----> Junit
+
+.net	---> Nunit
+
+python ----->pytest
+
+
+
+
+Assertions
+
+
+function to read two numbers and return the sum 
+
+f(a,b)-----> a+b
+
+
+function is reading userid and password and on successful validation, if it returns
+true if validates else false
+
+f(username,passwd)----->true / false
+
+
+f(10,20)-----> 30
+
+
+Assertions(f(10,20), )-----> test fail
+
+
+
+Assertions( f(" ","kumar"), true)  
+
+
+
+
+
+    @Bean
+	public RouteLocator getwayRourter(RouteLocatorBuilder builder) {
+		return builder.routes()
+				.route(p->p.path("/notes/**").uri("lb://note-service/posts"))
+				.route(p->p.path("/comments/**").uri("lb://comment-service/comments"))
+				.build();
+	}
+	
+
+
+API Management
+---------------
+API Management is the process of designing, publishing, documenting and analyzing API's
+in a secure environment.  Through an API managment solution, an orgianziation can
+gurantee that both the public and internal API's they created are consumable and secure.
+
+
+API Gateway
+-----------
+
+API Gateway is fully managed service that makes it easy for developers to create, publish, maintain
+monitor and secure API's
+
+Will simply act as front end for applications to access the data.
+
+
+
+API Proxy
+---------
+A proxy is something which acts on behalf of something else.
+
+sit between you application and backend.
+
+API proxies provide an interface for developers for accessing backend services
+
+
+
+
+CLIENT ------->request---------------->API PROXY -------------->request------------------> API SERVICE
+
+
+API SERVICE ------> response-----> json-----> api proxy-------> response----------> xml-----> client
+
+
+API Traffic Management
+-----------------------
+
+
+1. API Level---
+
+2. Transport layer / network layer level
+
+
+1. controlling and monitoring the flow
+
+2. Attack Prevention
+
+
+
+DevOps
+------
+
+Best choice for Mircoservices
+
+Developers + Operations
+
+Testing
+-------
+
+1. White Box  --- Testing performed on code (Code coverages)
+
+2. Black Box------ Testing performed on product (Functionality)
+
+
+
+unit testing
+------------
+
+The process of testing the unit of code
+
+
+
+
+
+public int add(int a , int b){
+		return a+b;
+}
+
+
+
+
+add(10,20)----> 30
+
+assertEquals(add(10,20),30)  // fail
+
+
+controller layer
+
+rest endpoints  
+
+
+
+http://localhost:8084/notes/search/1001
+
+unit test
+
+
+
+
+
+
+
+
 
 
 
