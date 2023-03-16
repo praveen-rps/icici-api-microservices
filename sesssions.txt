@@ -38,6 +38,7 @@ Service-oriented architecture (SOA) is an enterprise-wide approach to software d
 application components that takes advantage of reusable software components, or services.
 
 
+
 In SOA software architecture, each service is comprised of the code and data integrations 
 required to execute a specific business function 
 
@@ -51,8 +52,7 @@ or no knowledge of how the integration is implemented underneath.
 Because of this loose coupling and the way the services are published, development teams can 
 save time by reusing components in other applications across the enterprise. 
 
-This is both a benefit and a risk. As a result of the shared access to the enterprise service 
-bus (ESB), if issues arise, it can also affect the other connected services. 
+This is both a benefit and a risk. As a result of the shared access to the enterprise service bus (ESB), if issues arise, it can also affect the other connected services. 
 
 SOA provides four different service types:
 
@@ -69,11 +69,24 @@ SOA provides four different service types:
 
 Each service consists of three components:
 
-	1. The interface, which defines how a service provider will execute requests from a service 
-		consumer.
+	1. The interface, which defines how a service provider will execute requests from a service consumer.-----> 
+
+Request and Response Objects
+
+Request objects
+
+1. request method      ----  GET,POST,DELETE,HEAD,PUT,OPTIONS
+2. request body		------ PAYLOAD / DATA 
+3. request parameters
+4. path
+
+
+THROUGH Request Body
+through path
+through request parameters
+
     
-	2. The contract, which defines how the service provider and service consumer should 
-	   interact.
+	2. The contract, which defines how the service provider and service consumer should  interact.
     
 	3. The implementation, which is the service code.
 
@@ -88,12 +101,158 @@ AWS Kubernetes can be used.
 
 Different Interaction Patterns in Microservices
 ------------------------------------------------
-1.Aggregator
+1. Aggregator
 2. API Gateway
 3. Chained or Chain of Responsibilities
+		--> fault tolerance and resiliency
+
 4. Asychronous Messaging
 
 
+user -----> credit card ----> savings 
+
+time t-----> savings
+retry ----> 1sec ---> 
+
+1. savings is not ready ie it is getting up
+
+2. savings is not working  --- Handle situation using fallBack methods
+
+
+Future of Microservices
+-----------------------
+Microservices are the next generation architecture due to following reasons:
+
+1. Flexibility
+
+2. Reusability
+
+3. Reduces Risk
+
+4. Scalability
+
+5. Reduces Cost
+
+6. Continious Delivery
+
+7. Various Data Storage
+
+8. Easy team collaboration
+
+9. Adaptability
+
+With microservice architecture, organizations can use various programming languages or different technologies for building a new feature for their business. That means the developers can implement fast and controlled upgrades without disruption.
+
+10. Agility
+
+Each service in a microservice architecture performs only one functionality. Accordingly, it is easier to release, scale and test each service independently as it comprises a lightweight codebase. 
+
+Because of this advantage, Amazon migrated its monolithic architecture to microservices. 
+
+Their complex team structure was replaced by smaller, more efficient and cross-functional teams.
+
+
+
+What are API's
+--------------
+An API, or application programming interface, is a set of defined rules that enable different applications to communicate with each other. 
+
+It acts as an intermediary layer that processes data transfers between systems, letting companies open their application data and functionality to external third-party developers, business partners, and internal departments within their companies.
+
+
+The definitions and protocols within an API help businesses connect the many different applications they use in day-to-day operations, which saves employees time and breaks down silos that hinder collaboration and innovation.
+
+
+How an API works
+----------------
+
+A simple way to understand how APIs work is to look at a common example—third-party payment processing. When a user purchases a product on an ecommerce site, they may be prompted to “Pay with Paypal” or another type of third-party system. This function relies on APIs to make the connection.
+
+
+API Benefits
+------------
+APIs simplify design and development of new applications and services, and integration and management of existing ones.
+
+1. Improved Colloboration
+
+2. Accelerated Innovation
+
+3. Data Monetization
+
+4. System Security
+
+5. End Security and Privacy
+
+API's in Action - Common Examples
+---------------------------------
+Here are some popular examples of API uses that users encounter almost every day:
+
+1. Universal Logins
+
+2. Internet of Things (IoT)
+
+3. Travel booking companies 
+
+4. Mapping apps
+
+5. Twitter
+
+6. Saas Applications
+
+Types of API's
+--------------
+
+1. Open API's  -- public API's
+Authentication and Authorization
+
+
+
+2. Partner API's
+
+3. Internal API's -- Private API's
+			
+
+4. Composite API's
+		card validate through visa/ master card
+		validate through the bank -- otp's
+
+
+
+API Protocols
+--------------
+
+1. SOAP (Simple Object Access Protocol)
+
+2. XML-RPC ( XML - Remote Procedure Call)
+
+3. JSON-RPC( JSON - Remote Procedure Call)
+
+4. REST ( Representation State Transfer )
+
+
+REST More privilege  ----> API's 
+
+SOAP ---->  XML  format
+REST  ----> JSON, XML  (DTD)
+
+SOAP works with WSDL (Web Services Description Language)--->XML w3c 2007
+REST works with GET,POST, PUT, DELETE etch
+
+SOAP---> Almost protocols (HTTP/s, SMTP,Telnet,FTP)
+REST ---> HTTP/s
+
+
+SOAP---> Highly structured / typed data 
+REST ---> Less Strucrured / loosely typed data
+
+SOAP---> Designed for large applications
+REST ---> small scale to mobile applications
+
+REST----> 2000 ---> Not structure or well defined
+
+
+Role of API's in Micoservices
+-----------------------------
 
 
 Trade-offs between REST and RPC, why to consider REST as a good starting point for 
@@ -145,45 +304,43 @@ Disadvantages of RPC APIs
     
 	-> It has no flexibility for hardware architecture.
 
-Future of Microservices
------------------------
-Microservices are the next generation architecture due to following reasons:
 
-1. Flexibility
+JavaScript API's
+----------------
 
-2. Reusability
+What is Web API
+-----------------
+API stands for Application Programming Interface.
 
-3. Reduces Risk
+A Web API is an application programming interface for the Web.
 
-4. Scalability
+A Browser API can extend the functionality of a web browser.
 
-5. Reduces Cost
-
-6. Continious Delivery
-
-7. Various Data Storage
-
-8. Easy team collaboration
-
-9. Adaptability
-
-With microservice architecture, organizations can use various programming languages or different technologies for building a 
-new feature for their business. That means the developers can implement fast and controlled upgrades without disruption.
-
-10. Agility
-
-Each service in a microservice architecture performs only one functionality. Accordingly, it is easier to release, scale and test 
-each service independently as it comprises a lightweight codebase. 
-
-Because of this advantage, Amazon migrated its monolithic architecture to microservices. 
-
-Their complex team structure was replaced by smaller, more efficient and cross-functional teams.
+A Server API can extend the functionality of a web server.
 
 
-
-
-Role of API's
+Browser APIs
 -------------
+All browsers have a set of built-in Web APIs to support complex operations, and to help accessing data.
+
+For example, the Geolocation API can return the coordinates of where the browser is located.
+
+navigator.geolocation
+
+
+
+Third Party APIs
+
+Third party APIs are not built into your browser.
+
+To use these APIs, you will have to download the code from the Web.
+
+Examples:
+
+    YouTube API - Allows you to display videos on a web site.
+    Twitter API - Allows you to display Tweets on a web site.
+    Facebook API - Allows you to display Facebook info on a web site.
+
 
 
 Introduction to Mesh Services
@@ -289,12 +446,7 @@ Disadvantages
 
 
 
-
-
-
-
-
-
+applnA <-----------------------> applB
 
 
 Two way SSL handshaking, Digital Signing of API Request (XML & JSON)
@@ -322,6 +474,30 @@ and it includes the following steps:
 		client.
 
 
+client -----------------> ssl connection -----------------> server
+
+Encrytption and Decryption
+--------------------------
+RSA  -----> public key encrption algorthim
+
+1. private key
+2. public key
+
+DigiCert------> public  key
+
+
+
+
+GlobalSign
+Sectigo
+Iden Trust
+
+
+
+
+
+
+
 API Life Cycle
 --------------
 
@@ -346,9 +522,30 @@ Design:   Identify process and business requirements, create logical data model,
 Simulate: Model API resources, model API operations/methods, model request/response payload/codes
 
 Feedback: Mock up the API, publish interactive console, create notebook use cases, receive developer 
-          feedback
+          feedback.
 
 Validate: Modify API design as appropriate based on developer feedback, continue to validate
+
+
+NotesApplication
+----------------
+
+1. Display all the posts
+
+		GET ---> http://localhost:8082/notes/all  ---> json/xml
+
+
+		
+
+2. create a post 
+
+	POST ---> http://localhost:8082/notes/add  ----> json/xml
+
+		
+
+3. find the comments for the given post
+	GET --. /notes/findByPostId/{pid}  ---> json/ xml
+
 
 
 
@@ -380,8 +577,39 @@ Monitor
 Troubleshoot
 Manage
 
+REQUEST
+RESPONSE
+
+
+
+
 
 Demo on creating a Microservice using REST API
 ----------------------------------------------
+
+
+1. display all the data 
+
+
+url----> localhost:8083/comments/showAll
+
+
+url----> localhost:8081/notes/showAll
+
+REST  ----> Representation State Transfer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
